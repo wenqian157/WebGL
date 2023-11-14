@@ -67,6 +67,11 @@
         productName: "20231106_Innovedum",
         productVersion: "0.1",
         showBanner: unityShowBanner,
+        cacheControl: function (url) {
+     // Disable explicit caching for all other files.
+     // Note: the default browser cache may cache them anyway.
+     return "no-store";
+   },
       };
 
       // By default Unity keeps WebGL canvas render target size matched with
